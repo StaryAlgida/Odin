@@ -1,0 +1,10 @@
+root{
+    --header-bg: #1F2937;
+    --buttons-color: #3882F6;
+    --quote-section-bg: #E5E7EB;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
