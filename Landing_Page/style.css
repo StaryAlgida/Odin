@@ -1,10 +1,47 @@
-root{
+:root{
     --header-bg: #1F2937;
     --buttons-color: #3882F6;
     --quote-section-bg: #E5E7EB;
+
+    --main-text-color: #F9FaF8;
 }
 
 *{
     margin: 0;
     padding: 0;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--main-text-color);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+
+    padding-top: 20px;
+}
+
+.nav-container ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    gap: 50px;
+}
+
+.header-container img{
+    width: 500px;
+}
+
+.header-content{
+    width: 400px;
+    margin-right: 30px;
 }
