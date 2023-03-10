@@ -51,6 +51,15 @@ ul li a{
     margin-right: 30px;
 }
 
+.header-content button{
+    color: var(--main-text-color);
+    background-color: var(--buttons-color);
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px 20px;
+}
+
 .container{
     display: flex;
     justify-content: center;
@@ -93,4 +102,39 @@ section h2{
 
 #quote-container span {
     float: right;
+}
+
+.info-container{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    width: 800px;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 40px;
+    background-color: var(--buttons-color);
+    border-radius: 10px;
+    color: var(--main-text-color);
+}
+
+.info-container button{
+    background-color: var(--buttons-color);
+    border: 2px solid var(--quote-section-bg);
+    border-radius: 10px;
+    color: var(--main-text-color);
+    padding: 0 30px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-bg);
+    color: var(--main-text-color);
+    height: 100px;
+}
+
+footer p{
+    text-align: center;
 }
