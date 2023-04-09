@@ -1,0 +1,82 @@
+:root{
+    background-color: #23272e;
+}
+
+*{
+    color: white;
+}
+
+header{
+    text-align: center;
+}
+
+header h1{
+    font-size: 3em;
+    
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+}
+
+#player{
+    height: inherit;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 2px solid white;
+    align-items: center;
+}
+
+#player h2, #ai h2{
+    font-size: 2.5em;
+}
+
+.buttons{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.choose{
+    color: black;
+    font-size: 2.5em;
+    width: 220px;
+    border-radius: 1em;
+}
+
+.choose:hover{
+    background-color: aqua;
+}
+
+#score{
+    width: 10vw;
+}
+
+#score p{
+    font-size: 40px;
+}
+
+#ai{
+    height: inherit;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    border-left: 2px solid white;
+}
+
+#result{
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    font-size: 3em;
+}
