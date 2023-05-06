@@ -2,6 +2,7 @@ const container = document.querySelector('.container');
 const range = document.querySelector('#range');
 const resize = document.querySelector('#size');
 
+let isDrawing = false;
 
 resize.addEventListener("mouseup", () =>{ 
     clear_container()
@@ -12,15 +13,26 @@ resize.addEventListener("mousemove", () => {
     range.innerHTML = resize.value;
 })
 
+container.addEventListener("mousedown", () =>{
+    isDrawing = true;
+})
+
+container.addEventListener("mouseup", () =>{
+    isDrawing = false;
+})
+
 const clear_container = () =>{
-    let elements = document.querySelectorAll('.pixel')
-    elements.forEach(pixel => pixel.parentNode.removeChild(pixel))
-    console.log(elements.length);
-    // elements.parentNode.removeChild(elements)
+    container.innerHTML='';
+}
+
+const set_up = (s) =>{
+    resize.value = s;
+    resize_container(s)
 }
 
 const resize_container = (s) =>{
     let size = Math.pow(s, 2);
+    container.style.gridTemplateColumns = `repeat(${s}, auto)`;
     let blockWidthHeight = (600/s).toString()+'px';
     console.log(blockWidthHeight);
     let divs = [];
@@ -28,20 +40,15 @@ const resize_container = (s) =>{
     for (let i = 0; i < size; i++)
     {
         divs.push(document.createElement('div'));
-        divs[i].className ='pixel';
-        divs[i].style.minWidth = blockWidthHeight;
-        // divs[i].style.height = blockWidthHeight;
-
-        divs[i].addEventListener("mousedown", ()=> {
-            divs[i].style.backgroundColor = "black";
+        
+        divs[i].addEventListener("mousemove", ()=> {
+            if (isDrawing){
+                divs[i].style.backgroundColor = "black";
+            }
         })
-
         container.appendChild(divs[i]);
     }
 }
 
+window.onload = set_up(16)
 
-resize_container(64)
-
-
-// console.log(divs.length);
