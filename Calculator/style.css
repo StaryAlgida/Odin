@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 100px;
+}
+
+.claculator{
+    background-color: rgb(134, 123, 123);
+    width: 450px;
+    height: 650px;
+    border-radius: 15px;
+}
+
+#display{
+    margin: auto;
+    margin-top: 25px;
+    background-color: aqua;
+    width: 90%;
+    border-radius: 15px;
+}
+
+#background-text{
+    padding-top: 10px;
+    margin-bottom: 5px ;
+}
+
+#text-main{
+    padding-bottom: 10px;
+}
+
+#background-text, #text-main{
+    display: block;
+    text-align: right;
+    padding-right: 15px;
+    font-size: 30px;
+}
