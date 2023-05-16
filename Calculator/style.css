@@ -11,6 +11,8 @@ h1{
 }
 
 .claculator{
+    display: flex;
+    flex-direction: column;
     background-color: rgb(134, 123, 123);
     width: 450px;
     height: 650px;
@@ -26,17 +28,54 @@ h1{
 }
 
 #background-text{
-    padding-top: 10px;
-    margin-bottom: 5px ;
+    
+    margin-bottom: 15px ;
 }
 
-#text-main{
-    padding-bottom: 10px;
-}
-
-#background-text, #text-main{
+p span{
     display: block;
     text-align: right;
     padding-right: 15px;
     font-size: 30px;
+}
+
+#background-text{
+    font-size: 25px;
+}
+
+.grid-container{
+    display: grid;
+    flex:1;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    margin: 25px;
+}
+
+.calc-button{
+    display: flex;
+    justify-content: center;
+
+    
+    
+    text-align: center;
+    font-size: 50px;
+}
+
+.calc-button input{
+    flex: 1;
+    background-color: orange;
+    border-radius: 15px;
+    font-size: inherit;
+}
+
+#clear{
+    grid-column-start: 1;
+    grid-column-end:3;
+}
+
+#delete{
+    grid-column-start: 3;
+    grid-column-end: 5;
 }
