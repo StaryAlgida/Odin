@@ -33,8 +33,8 @@ buttons.map(bt =>{
                 memory["numberMain"] = '';
                 
                 memory["flagMathOp"] = true;
-                
-                updateBackStr();
+                memory["dotFlag"] = false;
+                updateBackStr(memory["numberBack"], memory["mathOp"]);
             }
             else{
                 makeMath();
@@ -47,17 +47,51 @@ buttons.map(bt =>{
                 memory["numberMain"] = '';
                 memory["dotFlag"] = false;
 
-                updateBackStr();
+                updateBackStr(memory["numberBack"], memory["mathOp"]);
             }
         });
     }
 
     else if(bt.value === "."){
-        if (!memory["dotFlag"]){
-            memory["numberMain"] += ".";
-            memory["dotFlag"] = true;
-        }
+        bt.addEventListener('click', () =>{
+            if (!memory["dotFlag"]){
+                memory["numberMain"] += ".";
+                memory["dotFlag"] = true;
+            }
+        });
+        
     }
+
+    else if(bt.value === "="){
+        bt.addEventListener('click', () =>{
+            updateBackStr(memory["numberBack"], memory["mathOp"], memory["numberMain"]);
+            console.table(memory);
+            makeMath();
+            
+            updateMainStr(memory["result"]);
+            memory["numberBack"] = memory["result"];
+            memory["numberMain"] = '';
+        });
+    }
+
+    else if(bt.value ==="Clear"){
+        bt.addEventListener('click', () =>{
+            memory["numberBack"] = '';
+            memory["numberMain"] = '';
+
+            updateMainStr(memory["numberMain"]);
+            updateBackStr(memory["numberBack"]);
+        });
+    }
+
+    else if(bt.value ==="Delete"){
+        bt.addEventListener('click', () =>{
+            memory["numberMain"] = memory["numberMain"].slice(0,-1);
+           console.log(memory["numberMain"]);
+           updateMainStr(memory["numberMain"]);
+        });
+    }
+
 });
 
 function makeMath(){
@@ -82,5 +116,10 @@ function updateMainStr(str){
 }
 
 function updateBackStr(){
-    back.innerHTML = `${memory["numberBack"]} ${memory["mathOp"]}`;
+    let str = '';
+    argsArray = Array.from(arguments);
+    argsArray.forEach(element => {
+        str += `${element} `;
+    });
+    back.innerHTML = str;
 }
