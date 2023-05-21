@@ -1,6 +1,7 @@
 :root{
     color: white;
     background-color: #2d323b;
+    font-family: 'Lilita One', cursive;
 }
 
 h1{
@@ -18,7 +19,7 @@ h1{
 .claculator{
     display: flex;
     flex-direction: column;
-    background-color: rgb(134, 123, 123);
+    background-color: #3fe6a08f;
     width: 450px;
     height: 650px;
     border-radius: 15px;
@@ -27,7 +28,7 @@ h1{
 #display{
     margin: auto;
     margin-top: 25px;
-    background-color: aqua;
+    background-color: white;
     width: 90%;
     height: 110px;
     border-radius: 15px;
@@ -36,8 +37,9 @@ h1{
 }
 
 #background-text{
-    
-    margin-bottom: 15px ;
+    color: #365550;
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
 p span{
@@ -46,10 +48,6 @@ p span{
     padding-right: 15px;
     font-size: 30px;
     height: 25px;
-}
-
-#background-text{
-    font-size: 25px;
 }
 
 .grid-container{
@@ -72,7 +70,7 @@ p span{
 
 .calc-button input{
     flex: 1;
-    background-color: orange;
+    background-color: #ffc400;
     border-radius: 15px;
     font-size: inherit;
 }
@@ -82,7 +80,15 @@ p span{
     grid-column-end:3;
 }
 
+#clear input{
+    background-color: #f15811;
+}
+
 #delete{
     grid-column-start: 3;
     grid-column-end: 5;
+}
+
+#delete input{
+    background-color: rgba(18, 105, 219, 0.904);
 }
