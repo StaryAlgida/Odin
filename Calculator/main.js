@@ -3,7 +3,7 @@ let buttons  = Array.from(document.querySelectorAll("input[type=button]"));
 const back = document.querySelector("#background-text");
 const main = document.querySelector("#text-main");
 
-const dzialania = ["/", "x", "+", "-"];
+const dzialania = ["÷", "x", "+", "-"];
 
 let memory = {
     result:0,
@@ -105,7 +105,7 @@ function makeMath(){
         case "x":
             memory["result"] = Number(memory["numberBack"]) * Number(memory["numberMain"]);
             break;
-        case "/":
+        case "÷":
             memory["result"] = Number(memory["numberBack"]) / Number(memory["numberMain"]);
             break;
     }
