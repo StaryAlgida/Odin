@@ -15,35 +15,48 @@
         
         <div id="right">
             <div id="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate quam veritatis veniam magnam quisquam cupiditate molestias, id eos sunt laudantium modi et tempore architecto dignissimos omnis recusandae consequuntur esse natus.</p>
-                <p>Yust do it.</p>
+                <p class="some-message">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate quam veritatis veniam magnam quisquam cupiditate molestias, id eos sunt laudantium modi et tempore architecto dignissimos omnis recusandae consequuntur esse natus.</p>
+                <p class="some-message">Yust do it.</p>
             </div>
-            <div class="my-form">
-                <h2>Sign Up!</h2>
-                <form action="/" method="post">
+            <form action="/" method="post" id="form">
+                <div class="my-form">
+                    <h2>Sign Up!</h2>
+                    <div class="form-container">
+                            
+                        <div class="form-element">
+                            <label for="name">first name</label>
+                            <input type="text" name="first_name" id="first_name" minlength="1" required>
+                        </div>
+                            
+                        <div class="form-element">
+                            <label for="name">last name</label>
+                            <input type="text" name="last_name" id="last_name" minlength="1"required>
+                        </div>
+                            
+                        <div class="form-element">
+                            <label for="email">email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                            
+                        <div class="form-element">
+                            <label for="phone">phone number</label>
+                            <input type="tel" name="phone" id="phone" required>
+                        </div>
+                            
+                        <div class="form-element">
+                            <label for="password">password</label>
+                            <input type="password" name="password" id="password" required>
+                        </div>
 
-                    <label for="name">first name</label>
-                    <input type="text" name="first_name" id="first_name">
-
-                    <label for="name">last name</label>
-                    <input type="text" name="last_name" id="last_name">
-
-                    <label for="email">email</label>
-                    <input type="email" name="email" id="email">
-
-                    <label for="phone">phone number</label>
-                    <input type="tel" name="phone" id="phone">
-
-                    <label for="password">password</label>
-                    <input type="password" name="password" id="password">
-
-                    <label for="rpassword">repeat password</label>
-                    <input type="password" name="rpassword" id="rpassword">
-
-                    <button type="submit">Create Account</button>
-                </form>
-            </div>
-            
+                        <div class="form-element">
+                            <label for="rpassword">repeat password</label>
+                            <input type="password" name="rpassword" id="rpassword" required>
+                        </div>
+                    </div>
+                </div>
+                    
+                <button type="submit">Create Account</button>
+            </form>
         </div>
 
     </div>
