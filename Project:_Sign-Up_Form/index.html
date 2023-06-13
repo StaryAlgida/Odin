@@ -24,32 +24,32 @@
                     <div class="form-container">
                             
                         <div class="form-element">
-                            <label for="name">first name</label>
+                            <label for="name">*first name</label>
                             <input type="text" name="first_name" id="first_name" minlength="1" required>
                         </div>
                             
                         <div class="form-element">
                             <label for="name">last name</label>
-                            <input type="text" name="last_name" id="last_name" minlength="1"required>
+                            <input type="text" name="last_name" id="last_name" minlength="1">
                         </div>
                             
                         <div class="form-element">
-                            <label for="email">email</label>
+                            <label for="email">*email</label>
                             <input type="email" name="email" id="email" required>
                         </div>
                             
                         <div class="form-element">
                             <label for="phone">phone number</label>
-                            <input type="tel" name="phone" id="phone" required>
+                            <input type="text" name="phone" id="phone" minlength="9" maxlength="9">
                         </div>
                             
                         <div class="form-element">
-                            <label for="password">password</label>
+                            <label for="password">*password</label>
                             <input type="password" name="password" id="password" required>
                         </div>
 
                         <div class="form-element">
-                            <label for="rpassword">repeat password</label>
+                            <label for="rpassword">*repeat password</label>
                             <input type="password" name="rpassword" id="rpassword" required>
                         </div>
                     </div>
@@ -60,5 +60,6 @@
         </div>
 
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
