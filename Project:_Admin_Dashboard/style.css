@@ -1,6 +1,9 @@
 *{
     padding: 0;
     margin: 0;
+
+    --margin-left: 30px;
+    --option-size: 1.8rem;
 }
 
 .main-contanier{
@@ -12,10 +15,55 @@
 
     background-color: grey;
 }
-
+/* ---------------------------- */
 aside{
+    display: grid;
+    grid-template-rows: 100px 300px 200px 1fr;
+
     background-color: aqua;
 }
+
+.dashboard-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3rem;
+}
+
+.dashboard-icon svg{
+    width: 65px;
+}
+
+#first-part{
+    margin-top: 30px;
+    margin-left: var(--margin-left);
+}
+
+#second-part{
+    margin-top: 40px;
+    margin-left: var(--margin-left);
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-bottom: 10px;
+
+    font-size: var(--option-size);
+}
+
+.option svg{
+    width: var(--option-size);
+}
+
+.option span{
+    margin-left: var(--margin-left)
+}
+
+/* ---------------------------- */
 
 .content-container{
     background-color: blueviolet;
@@ -24,10 +72,34 @@ aside{
     grid-template-rows: 200px 1fr;
 }
 
+/* ---------------------------- */
 .search{
     background-color: bisque;
 }
 
+#search-input{
+    width: 60%;
+    padding: 10px 20px 10px 20px;
+
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
+
+#input{
+    display: flex;
+    align-items: center;
+
+    margin-top: 35px;
+    margin-left: var(--margin-left);
+}
+
+#input svg{
+    margin-right: 10px;
+    width: 2.4rem;
+}
+
+/* ---------------------------- */
 #content{
     background-color: chocolate;
     display: grid;
@@ -35,7 +107,7 @@ aside{
     margin-top: 30px;
     margin-left: 30px;
 
-    grid-template-columns: repeat(2, minmax(200px, 1fr)) 250px;
+    grid-template-columns: repeat(2, minmax(200px, 1fr)) 300px;
     grid-template-rows: 50px repeat(auto-fit, minmax(200px, 1fr));
 }
 
