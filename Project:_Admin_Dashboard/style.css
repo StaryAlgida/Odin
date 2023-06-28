@@ -1,9 +1,15 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: inherit;
 
     --margin-left: 30px;
     --option-size: 1.8rem;
+
+    --search-svg-size: 40px;
+
+    text-decoration: none;
+    color: black;
 }
 
 .main-contanier{
@@ -15,7 +21,7 @@
 
     background-color: grey;
 }
-/* ---------------------------- */
+/* ------------menu---------------- */
 aside{
     display: grid;
     grid-template-rows: 100px 300px 200px 1fr;
@@ -72,31 +78,78 @@ aside{
     grid-template-rows: 200px 1fr;
 }
 
-/* ---------------------------- */
+/* -----------search-------------- */
 .search{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     background-color: bisque;
+    padding: 20px;
+    padding-right: 50px;
+    
+}
+
+#search-bar{
+    display: grid;
+    grid-template-columns: 1fr max-content;
 }
 
 #search-input{
-    width: 60%;
-    padding: 10px 20px 10px 20px;
-
-    border: none;
+    width: max(80%, 700px);
+    border:none;
+    padding: 12px;
     border-radius: 20px;
-    font-size: 1.2rem;
 }
 
-#input{
+.search-svg{
+    width: var(--search-svg-size);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container:nth-child(2){
+    gap: 20px;
+}
+
+#media{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+}
+
+#profile{
     display: flex;
     align-items: center;
 
-    margin-top: 35px;
-    margin-left: var(--margin-left);
+    gap: 10px;
 }
 
-#input svg{
-    margin-right: 10px;
-    width: 2.4rem;
+#buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button{
+    background-color: burlywood;
+    padding: 15px 30px;
+
+    border-radius: 20px;
+}
+
+#profile img{
+    border-radius: 100%;
+    width: 80px;
+}
+
+
+.some-text{
+    display: block;
+}
+
+.some-text:nth-child(2){
+    margin-top: 5px;
 }
 
 /* ---------------------------- */
@@ -111,6 +164,11 @@ aside{
     grid-template-rows: 50px repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.title{
+    display: flex;
+    align-items: center;
+}
+
 .title:nth-child(2){
     grid-column: 3/4;
 }
@@ -118,6 +176,37 @@ aside{
 .content-grid{
     background-color: green;
     grid-column: 1/3;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 400px;
+
+    gap: 20px;
+}
+
+.content-item{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.content-img{
+    height: auto;
+    max-width: 600px;
+    width: 100%;
+
+    align-self: center;
+    
+}
+
+.item-svg{
+    width: var(--search-svg-size);
+}
+
+.svg-container{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .announ-grid{
