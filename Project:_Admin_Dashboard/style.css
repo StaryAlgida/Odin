@@ -8,25 +8,29 @@
 
     --search-svg-size: 40px;
 
+    --menu-bacground: #1992d4;
+    --menu-svg-color: white;
+
     text-decoration: none;
     color: black;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .main-contanier{
     display: grid;
     grid-template-columns: repeat(1, minmax(150px, 300px)) repeat(1, minmax(200px, 1fr));
 
-    width: 100vw;
-    height: 100vh;
+    width: auto;
+    height: auto;
 
-    background-color: grey;
 }
 /* ------------menu---------------- */
 aside{
     display: grid;
     grid-template-rows: 100px 300px 200px 1fr;
 
-    background-color: aqua;
+    background-color: var(--menu-bacground);
 }
 
 .dashboard-icon{
@@ -34,11 +38,18 @@ aside{
     justify-content: center;
     align-items: center;
 
-    font-size: 3rem;
+    font-size: 2.7rem;
+    
+    fill: var(--menu-svg-color);
+    font-weight: 500;
 }
 
 .dashboard-icon svg{
     width: 65px;
+}
+
+.dashboard-icon span{
+    color: white;
 }
 
 #first-part{
@@ -62,17 +73,21 @@ aside{
 }
 
 .option svg{
+    fill: var(--menu-svg-color);
     width: var(--option-size);
 }
 
 .option span{
-    margin-left: var(--margin-left)
+    margin-left: var(--margin-left);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
 }
 
 /* ---------------------------- */
 
 .content-container{
-    background-color: blueviolet;
+    background-color: #e2e8f0;
 
     display: grid;
     grid-template-rows: 200px 1fr;
@@ -82,7 +97,7 @@ aside{
 .search{
     display: grid;
     grid-template-rows: 1fr 1fr;
-    background-color: bisque;
+    background-color: white;
     padding: 20px;
     padding-right: 50px;
     
@@ -98,6 +113,8 @@ aside{
     border:none;
     padding: 12px;
     border-radius: 20px;
+
+    background-color: #e2e8f0;
 }
 
 .search-svg{
@@ -132,9 +149,12 @@ aside{
 }
 
 .button{
-    background-color: burlywood;
-    padding: 15px 30px;
+    background-color: var(--menu-bacground);
+    padding: 15px 40px;
 
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
     border-radius: 20px;
 }
 
@@ -146,15 +166,18 @@ aside{
 
 .some-text{
     display: block;
+
+    font-family: inherit;
 }
 
 .some-text:nth-child(2){
     margin-top: 5px;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 /* ---------------------------- */
 #content{
-    background-color: chocolate;
     display: grid;
 
     margin-top: 30px;
@@ -174,17 +197,18 @@ aside{
 }
 
 .content-grid{
-    background-color: green;
     grid-column: 1/3;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-auto-rows: 400px;
+    grid-auto-rows: 1fr;
 
     gap: 20px;
 }
 
 .content-item{
+    background-color: white;
+
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -200,6 +224,10 @@ aside{
     
 }
 
+.item-text{
+    margin-left: 10px;
+}
+
 .item-svg{
     width: var(--search-svg-size);
 }
@@ -210,5 +238,26 @@ aside{
 }
 
 .announ-grid{
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    gap: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     background-color: blue;
+
+    border-radius: 10px;
+}
+
+.announ{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.announ-item p{
+    line-break: anywhere;
+}
+
+#an{
+    margin-left: 10px;
 }
